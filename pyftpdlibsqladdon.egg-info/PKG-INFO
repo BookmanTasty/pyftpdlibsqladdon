@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pyftpdlibsqladdon
-Version: 0.1.0
+Version: 0.1.1
 Summary: Module for implementing FTP users in pyftpdlib through a SQL server
 Home-page: https://github.com/BookmanTasty/pyftpdlibsqladdon
 Author: Cesar Leyva
@@ -16,6 +16,7 @@ Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
 Classifier: Operating System :: OS Independent
 Description-Content-Type: text/markdown
 License-File: LICENSE

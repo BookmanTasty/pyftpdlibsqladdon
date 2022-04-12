@@ -5,6 +5,12 @@ from .client import SqlClient
 
 class DummySqlAuthorizer(DummyAuthorizer):
     def add_sql_config(self, host, database, dbuser, dbpassword):
+        """Add the connection data for the SQL database
+        Host
+        Database
+        user
+        Password
+        """
         dic = {'host': str(host),
                'database': str(database),
                'user': str(dbuser),
@@ -13,6 +19,9 @@ class DummySqlAuthorizer(DummyAuthorizer):
         self.user_table["sql_server_config"] = dic
 
     def add_sql_query(self, table, user, password, home, permissions):
+        """Add the names of the database columns in SQL so that they 
+        can be loaded into the system
+        """
         dic = {'table': str(table),
                'user': str(user),
                'password': str(password),
@@ -24,7 +33,7 @@ class DummySqlAuthorizer(DummyAuthorizer):
 
     def validate_authentication(self, username, password, handler):
         """Raises AuthenticationFailed if supplied username and
-        password don't match the stored credentials, else return
+        password don't match the stored credentials in database, else return
         None.
         """
         if username == "sql_query_config":
