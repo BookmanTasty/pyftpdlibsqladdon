@@ -4,8 +4,8 @@ from pyftpdlibsqladdon import DummySqlAuthorizer
 
 def main():
     authorizer = DummySqlAuthorizer()
-    authorizer.add_sql_config('192.168.88.176','ftp_server','root','leluca')
-    authorizer.add_sql_query('usuarios','usuario','contra','ruta','permisos')
+    authorizer.add_sql_config('host_ip','database','sql_user','sql_password')
+    authorizer.add_sql_query('table','user_column','password_column','home_path_column','permission_colum')
     handler = FTPHandler
     handler.authorizer = authorizer
     server = FTPServer(('', 21), handler)
